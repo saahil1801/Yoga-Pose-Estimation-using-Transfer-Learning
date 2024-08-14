@@ -2,3 +2,4 @@ venv/
 mlruns/
 *.dylib
 *.keras
+wandb/
