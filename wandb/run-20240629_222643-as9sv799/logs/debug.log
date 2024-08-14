@@ -1,0 +1,221 @@
+2024-06-29 22:26:43,800 INFO    MainThread:438 [wandb_setup.py:_flush():76] Current SDK version is 0.17.3
+2024-06-29 22:26:43,800 INFO    MainThread:438 [wandb_setup.py:_flush():76] Configure stats pid to 438
+2024-06-29 22:26:43,800 INFO    MainThread:438 [wandb_setup.py:_flush():76] Loading settings from /Users/saahil/.config/wandb/settings
+2024-06-29 22:26:43,800 INFO    MainThread:438 [wandb_setup.py:_flush():76] Loading settings from /Users/saahil/Desktop/Coding_Projects/DL/PoseYoga TL/wandb/settings
+2024-06-29 22:26:43,800 INFO    MainThread:438 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-06-29 22:26:43,800 INFO    MainThread:438 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-06-29 22:26:43,800 INFO    MainThread:438 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2024-06-29 22:26:43,800 INFO    MainThread:438 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-06-29 22:26:43,800 INFO    MainThread:438 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-06-29 22:26:43,800 ERROR   MainThread:438 [wandb_setup.py:_flush():78] error in wandb.init()
+Traceback (most recent call last):
+  File "/Users/saahil/Desktop/Coding_Projects/DL/PoseYoga TL/venv/lib/python3.9/site-packages/IPython/core/interactiveshell.py", line 3550, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "/var/folders/n_/4p37f261177fmjpv4kt7x33m0000gn/T/ipykernel_438/868237815.py", line 1, in <module>
+    wandb.init(project="yoga_pose_classification", config={"epochs": 10, "batch_size": 32, "image_size": (256, 256)})
+  File "/Users/saahil/Desktop/Coding_Projects/DL/PoseYoga TL/venv/lib/python3.9/site-packages/wandb/sdk/wandb_init.py", line 1185, in init
+    wandb._sentry.reraise(e)
+  File "/Users/saahil/Desktop/Coding_Projects/DL/PoseYoga TL/venv/lib/python3.9/site-packages/wandb/analytics/sentry.py", line 155, in reraise
+    raise exc.with_traceback(sys.exc_info()[2])
+  File "/Users/saahil/Desktop/Coding_Projects/DL/PoseYoga TL/venv/lib/python3.9/site-packages/wandb/sdk/wandb_init.py", line 1170, in init
+    wi.setup(kwargs)
+  File "/Users/saahil/Desktop/Coding_Projects/DL/PoseYoga TL/venv/lib/python3.9/site-packages/wandb/sdk/wandb_init.py", line 300, in setup
+    wandb_login._login(
+  File "/Users/saahil/Desktop/Coding_Projects/DL/PoseYoga TL/venv/lib/python3.9/site-packages/wandb/sdk/wandb_login.py", line 340, in _login
+    wlogin.prompt_api_key()
+  File "/Users/saahil/Desktop/Coding_Projects/DL/PoseYoga TL/venv/lib/python3.9/site-packages/wandb/sdk/wandb_login.py", line 270, in prompt_api_key
+    key, status = self._prompt_api_key()
+  File "/Users/saahil/Desktop/Coding_Projects/DL/PoseYoga TL/venv/lib/python3.9/site-packages/wandb/sdk/wandb_login.py", line 249, in _prompt_api_key
+    key = apikey.prompt_api_key(
+  File "/Users/saahil/Desktop/Coding_Projects/DL/PoseYoga TL/venv/lib/python3.9/site-packages/wandb/sdk/lib/apikey.py", line 164, in prompt_api_key
+    key = input_callback(api_ask).strip()
+  File "/Users/saahil/Desktop/Coding_Projects/DL/PoseYoga TL/venv/lib/python3.9/site-packages/click/termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+  File "/Users/saahil/Desktop/Coding_Projects/DL/PoseYoga TL/venv/lib/python3.9/site-packages/click/termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+2024-06-29 22:26:43,822 INFO    MainThread:438 [wandb_init.py:_log_setup():520] Logging user logs to /Users/saahil/Desktop/Coding_Projects/DL/PoseYoga TL/wandb/run-20240629_222643-as9sv799/logs/debug.log
+2024-06-29 22:26:43,822 INFO    MainThread:438 [wandb_init.py:_log_setup():521] Logging internal logs to /Users/saahil/Desktop/Coding_Projects/DL/PoseYoga TL/wandb/run-20240629_222643-as9sv799/logs/debug-internal.log
+2024-06-29 22:26:43,822 INFO    MainThread:438 [wandb_init.py:_jupyter_setup():466] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x5a7dc6dc0>
+2024-06-29 22:26:43,822 INFO    MainThread:438 [wandb_init.py:init():560] calling init triggers
+2024-06-29 22:26:43,822 INFO    MainThread:438 [wandb_init.py:init():567] wandb.init called with sweep_config: {}
+config: {'epochs': 10, 'batch_size': 32, 'image_size': (256, 256)}
+2024-06-29 22:26:43,822 INFO    MainThread:438 [wandb_init.py:init():610] starting backend
+2024-06-29 22:26:43,822 INFO    MainThread:438 [wandb_init.py:init():614] setting up manager
+2024-06-29 22:26:43,823 INFO    MainThread:438 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn,fork,forkserver, using: spawn
+2024-06-29 22:26:43,825 INFO    MainThread:438 [wandb_init.py:init():622] backend started and connected
+2024-06-29 22:26:43,828 INFO    MainThread:438 [wandb_run.py:_label_probe_notebook():1334] probe notebook
+2024-06-29 22:26:43,828 INFO    MainThread:438 [wandb_run.py:_label_probe_notebook():1344] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2024-06-29 22:26:43,828 INFO    MainThread:438 [wandb_init.py:init():711] updated telemetry
+2024-06-29 22:26:43,887 INFO    MainThread:438 [wandb_init.py:init():744] communicating run to backend with 90.0 second timeout
+2024-06-29 22:26:44,748 INFO    MainThread:438 [wandb_run.py:_on_init():2402] communicating current version
+2024-06-29 22:26:44,927 INFO    MainThread:438 [wandb_run.py:_on_init():2411] got version response 
+2024-06-29 22:26:44,927 INFO    MainThread:438 [wandb_init.py:init():795] starting run threads in backend
+2024-06-29 22:26:46,235 INFO    MainThread:438 [wandb_run.py:_console_start():2380] atexit reg
+2024-06-29 22:26:46,236 INFO    MainThread:438 [wandb_run.py:_redirect():2235] redirect: wrap_raw
+2024-06-29 22:26:46,236 INFO    MainThread:438 [wandb_run.py:_redirect():2300] Wrapping output streams.
+2024-06-29 22:26:46,236 INFO    MainThread:438 [wandb_run.py:_redirect():2325] Redirects installed.
+2024-06-29 22:26:46,237 INFO    MainThread:438 [wandb_init.py:init():838] run started, returning control to user process
+2024-06-29 22:26:46,239 INFO    MainThread:438 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-06-29 22:26:46,239 INFO    MainThread:438 [wandb_init.py:_pause_backend():431] pausing backend
+2024-06-29 22:26:48,900 INFO    MainThread:438 [wandb_init.py:_resume_backend():436] resuming backend
+2024-06-29 22:26:48,901 INFO    MainThread:438 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-06-29 22:26:48,901 INFO    MainThread:438 [wandb_init.py:_pause_backend():431] pausing backend
+2024-06-29 22:26:49,819 INFO    MainThread:438 [wandb_init.py:_resume_backend():436] resuming backend
+2024-06-29 22:26:49,819 INFO    MainThread:438 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-06-29 22:26:49,819 INFO    MainThread:438 [wandb_init.py:_pause_backend():431] pausing backend
+2024-06-29 22:26:50,142 INFO    MainThread:438 [wandb_init.py:_resume_backend():436] resuming backend
+2024-06-29 22:26:50,240 INFO    MainThread:438 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-06-29 22:26:50,241 INFO    MainThread:438 [wandb_init.py:_pause_backend():431] pausing backend
+2024-06-29 22:26:50,374 INFO    MainThread:438 [wandb_init.py:_resume_backend():436] resuming backend
+2024-06-29 22:26:51,466 INFO    MainThread:438 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-06-29 22:26:51,466 INFO    MainThread:438 [wandb_init.py:_pause_backend():431] pausing backend
+2024-06-29 22:26:51,477 INFO    MainThread:438 [wandb_init.py:_resume_backend():436] resuming backend
+2024-06-29 22:26:51,478 INFO    MainThread:438 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-06-29 22:26:51,478 INFO    MainThread:438 [wandb_init.py:_pause_backend():431] pausing backend
+2024-06-29 22:26:51,490 INFO    MainThread:438 [wandb_init.py:_resume_backend():436] resuming backend
+2024-06-29 22:26:51,496 INFO    MainThread:438 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-06-29 22:26:51,496 INFO    MainThread:438 [wandb_init.py:_pause_backend():431] pausing backend
+2024-06-29 22:26:51,501 INFO    MainThread:438 [wandb_init.py:_resume_backend():436] resuming backend
+2024-06-29 22:26:51,506 INFO    MainThread:438 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-06-29 22:26:51,506 INFO    MainThread:438 [wandb_init.py:_pause_backend():431] pausing backend
+2024-06-29 22:26:52,047 INFO    MainThread:438 [wandb_init.py:_resume_backend():436] resuming backend
+2024-06-29 22:26:52,051 INFO    MainThread:438 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-06-29 22:26:52,051 INFO    MainThread:438 [wandb_init.py:_pause_backend():431] pausing backend
+2024-06-29 22:26:52,521 INFO    MainThread:438 [wandb_init.py:_resume_backend():436] resuming backend
+2024-06-29 22:26:52,928 INFO    MainThread:438 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-06-29 22:26:52,928 INFO    MainThread:438 [wandb_init.py:_pause_backend():431] pausing backend
+2024-06-29 22:26:52,932 INFO    MainThread:438 [wandb_init.py:_resume_backend():436] resuming backend
+2024-06-29 22:26:52,933 INFO    MainThread:438 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-06-29 22:26:52,933 INFO    MainThread:438 [wandb_init.py:_pause_backend():431] pausing backend
+2024-06-29 22:26:53,206 INFO    MainThread:438 [wandb_init.py:_resume_backend():436] resuming backend
+2024-06-29 22:26:53,323 INFO    MainThread:438 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-06-29 22:26:53,323 INFO    MainThread:438 [wandb_init.py:_pause_backend():431] pausing backend
+2024-06-29 22:26:53,476 INFO    MainThread:438 [wandb_init.py:_resume_backend():436] resuming backend
+2024-06-29 22:26:55,729 INFO    MainThread:438 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-06-29 22:26:55,729 INFO    MainThread:438 [wandb_init.py:_pause_backend():431] pausing backend
+2024-06-29 22:26:57,174 INFO    MainThread:438 [wandb_init.py:_resume_backend():436] resuming backend
+2024-06-29 22:26:57,266 INFO    MainThread:438 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-06-29 22:26:57,268 INFO    MainThread:438 [wandb_init.py:_pause_backend():431] pausing backend
+2024-06-29 22:29:19,148 INFO    MainThread:438 [wandb_init.py:_resume_backend():436] resuming backend
+2024-06-29 22:29:19,175 INFO    MainThread:438 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-06-29 22:29:19,175 INFO    MainThread:438 [wandb_init.py:_pause_backend():431] pausing backend
+2024-06-29 22:29:43,842 INFO    MainThread:438 [wandb_init.py:_resume_backend():436] resuming backend
+2024-06-29 22:29:43,843 INFO    MainThread:438 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-06-29 22:29:43,843 INFO    MainThread:438 [wandb_init.py:_pause_backend():431] pausing backend
+2024-06-29 22:30:10,511 INFO    MainThread:438 [wandb_init.py:_resume_backend():436] resuming backend
+2024-06-29 22:30:10,512 INFO    MainThread:438 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-06-29 22:30:10,512 INFO    MainThread:438 [wandb_init.py:_pause_backend():431] pausing backend
+2024-06-29 22:30:10,858 INFO    MainThread:438 [wandb_init.py:_resume_backend():436] resuming backend
+2024-06-29 22:30:10,859 INFO    MainThread:438 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-06-29 22:30:10,859 INFO    MainThread:438 [wandb_init.py:_pause_backend():431] pausing backend
+2024-06-29 22:30:11,253 INFO    MainThread:438 [wandb_init.py:_resume_backend():436] resuming backend
+2024-06-29 22:30:11,330 INFO    MainThread:438 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-06-29 22:30:11,330 INFO    MainThread:438 [wandb_init.py:_pause_backend():431] pausing backend
+2024-06-29 22:30:11,613 INFO    MainThread:438 [wandb_init.py:_resume_backend():436] resuming backend
+2024-06-29 22:30:12,159 INFO    MainThread:438 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-06-29 22:30:12,159 INFO    MainThread:438 [wandb_init.py:_pause_backend():431] pausing backend
+2024-06-29 22:30:17,742 INFO    MainThread:438 [wandb_init.py:_resume_backend():436] resuming backend
+2024-06-29 22:30:17,743 INFO    MainThread:438 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-06-29 22:30:17,744 INFO    MainThread:438 [wandb_init.py:_pause_backend():431] pausing backend
+2024-06-29 22:30:18,317 INFO    MainThread:438 [wandb_init.py:_resume_backend():436] resuming backend
+2024-06-29 22:30:18,321 INFO    MainThread:438 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-06-29 22:30:18,321 INFO    MainThread:438 [wandb_init.py:_pause_backend():431] pausing backend
+2024-06-29 22:30:18,640 INFO    MainThread:438 [wandb_init.py:_resume_backend():436] resuming backend
+2024-06-29 22:30:18,646 INFO    MainThread:438 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-06-29 22:30:18,646 INFO    MainThread:438 [wandb_init.py:_pause_backend():431] pausing backend
+2024-06-29 22:30:18,932 INFO    MainThread:438 [wandb_init.py:_resume_backend():436] resuming backend
+2024-06-29 22:30:18,936 INFO    MainThread:438 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-06-29 22:30:18,936 INFO    MainThread:438 [wandb_init.py:_pause_backend():431] pausing backend
+2024-06-29 22:30:19,169 INFO    MainThread:438 [wandb_init.py:_resume_backend():436] resuming backend
+2024-06-29 22:30:19,567 INFO    MainThread:438 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-06-29 22:30:19,568 INFO    MainThread:438 [wandb_init.py:_pause_backend():431] pausing backend
+2024-06-29 22:30:19,572 INFO    MainThread:438 [wandb_init.py:_resume_backend():436] resuming backend
+2024-06-29 22:30:19,572 INFO    MainThread:438 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-06-29 22:30:19,573 INFO    MainThread:438 [wandb_init.py:_pause_backend():431] pausing backend
+2024-06-29 22:30:19,583 INFO    MainThread:438 [wandb_init.py:_resume_backend():436] resuming backend
+2024-06-29 22:30:19,667 INFO    MainThread:438 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-06-29 22:30:19,668 INFO    MainThread:438 [wandb_init.py:_pause_backend():431] pausing backend
+2024-06-29 22:30:19,800 INFO    MainThread:438 [wandb_init.py:_resume_backend():436] resuming backend
+2024-06-29 22:30:21,986 INFO    MainThread:438 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-06-29 22:30:21,986 INFO    MainThread:438 [wandb_init.py:_pause_backend():431] pausing backend
+2024-06-29 22:30:21,990 INFO    MainThread:438 [wandb_init.py:_resume_backend():436] resuming backend
+2024-06-29 22:30:22,050 INFO    MainThread:438 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-06-29 22:30:22,050 INFO    MainThread:438 [wandb_init.py:_pause_backend():431] pausing backend
+2024-06-29 22:31:12,184 INFO    MainThread:438 [wandb_init.py:_resume_backend():436] resuming backend
+2024-06-29 22:31:12,186 INFO    MainThread:438 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-06-29 22:31:12,187 INFO    MainThread:438 [wandb_init.py:_pause_backend():431] pausing backend
+2024-06-29 22:31:22,336 INFO    MainThread:438 [wandb_init.py:_resume_backend():436] resuming backend
+2024-06-29 22:31:22,402 INFO    MainThread:438 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-06-29 22:31:22,402 INFO    MainThread:438 [wandb_init.py:_pause_backend():431] pausing backend
+2024-06-29 22:31:32,117 INFO    MainThread:438 [wandb_init.py:_resume_backend():436] resuming backend
+2024-06-29 22:34:19,385 INFO    MainThread:438 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-06-29 22:34:19,386 INFO    MainThread:438 [wandb_init.py:_pause_backend():431] pausing backend
+2024-06-29 22:38:17,687 INFO    MainThread:438 [wandb_init.py:_resume_backend():436] resuming backend
+2024-06-29 22:38:17,692 INFO    MainThread:438 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-06-29 22:38:17,693 INFO    MainThread:438 [wandb_init.py:_pause_backend():431] pausing backend
+2024-06-29 22:39:23,843 INFO    MainThread:438 [wandb_init.py:_resume_backend():436] resuming backend
+2024-06-29 22:39:23,847 INFO    MainThread:438 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-06-29 22:39:23,847 INFO    MainThread:438 [wandb_init.py:_pause_backend():431] pausing backend
+2024-06-29 22:39:24,124 INFO    MainThread:438 [wandb_init.py:_resume_backend():436] resuming backend
+2024-06-29 22:39:24,126 INFO    MainThread:438 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-06-29 22:39:24,126 INFO    MainThread:438 [wandb_init.py:_pause_backend():431] pausing backend
+2024-06-29 22:39:25,858 INFO    MainThread:438 [wandb_init.py:_resume_backend():436] resuming backend
+2024-06-29 22:39:25,861 INFO    MainThread:438 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-06-29 22:39:25,861 INFO    MainThread:438 [wandb_init.py:_pause_backend():431] pausing backend
+2024-06-29 22:39:26,121 INFO    MainThread:438 [wandb_init.py:_resume_backend():436] resuming backend
+2024-06-29 22:39:26,131 INFO    MainThread:438 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-06-29 22:39:26,131 INFO    MainThread:438 [wandb_init.py:_pause_backend():431] pausing backend
+2024-06-29 22:39:54,106 INFO    MainThread:438 [wandb_init.py:_resume_backend():436] resuming backend
+2024-06-29 22:39:54,131 INFO    MainThread:438 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-06-29 22:39:54,132 INFO    MainThread:438 [wandb_init.py:_pause_backend():431] pausing backend
+2024-06-29 22:39:54,791 INFO    MainThread:438 [wandb_init.py:_resume_backend():436] resuming backend
+2024-06-29 22:39:54,810 INFO    MainThread:438 [wandb_setup.py:_flush():76] Current SDK version is 0.17.3
+2024-06-29 22:39:54,810 INFO    MainThread:438 [wandb_setup.py:_flush():76] Configure stats pid to 438
+2024-06-29 22:39:54,810 INFO    MainThread:438 [wandb_setup.py:_flush():76] Loading settings from /Users/saahil/.config/wandb/settings
+2024-06-29 22:39:54,810 INFO    MainThread:438 [wandb_setup.py:_flush():76] Loading settings from /Users/saahil/Desktop/Coding_Projects/DL/PoseYoga TL/wandb/settings
+2024-06-29 22:39:54,810 INFO    MainThread:438 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-06-29 22:39:54,810 INFO    MainThread:438 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-06-29 22:39:54,810 INFO    MainThread:438 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2024-06-29 22:39:54,810 INFO    MainThread:438 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-06-29 22:39:54,810 INFO    MainThread:438 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-06-29 22:39:54,810 ERROR   MainThread:438 [wandb_setup.py:_flush():78] error in wandb.init()
+Traceback (most recent call last):
+  File "/Users/saahil/Desktop/Coding_Projects/DL/PoseYoga TL/venv/lib/python3.9/site-packages/IPython/core/interactiveshell.py", line 3550, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "/var/folders/n_/4p37f261177fmjpv4kt7x33m0000gn/T/ipykernel_438/868237815.py", line 1, in <module>
+    wandb.init(project="yoga_pose_classification", config={"epochs": 10, "batch_size": 32, "image_size": (256, 256)})
+  File "/Users/saahil/Desktop/Coding_Projects/DL/PoseYoga TL/venv/lib/python3.9/site-packages/wandb/sdk/wandb_init.py", line 1185, in init
+    wandb._sentry.reraise(e)
+  File "/Users/saahil/Desktop/Coding_Projects/DL/PoseYoga TL/venv/lib/python3.9/site-packages/wandb/analytics/sentry.py", line 155, in reraise
+    raise exc.with_traceback(sys.exc_info()[2])
+  File "/Users/saahil/Desktop/Coding_Projects/DL/PoseYoga TL/venv/lib/python3.9/site-packages/wandb/sdk/wandb_init.py", line 1170, in init
+    wi.setup(kwargs)
+  File "/Users/saahil/Desktop/Coding_Projects/DL/PoseYoga TL/venv/lib/python3.9/site-packages/wandb/sdk/wandb_init.py", line 300, in setup
+    wandb_login._login(
+  File "/Users/saahil/Desktop/Coding_Projects/DL/PoseYoga TL/venv/lib/python3.9/site-packages/wandb/sdk/wandb_login.py", line 340, in _login
+    wlogin.prompt_api_key()
+  File "/Users/saahil/Desktop/Coding_Projects/DL/PoseYoga TL/venv/lib/python3.9/site-packages/wandb/sdk/wandb_login.py", line 270, in prompt_api_key
+    key, status = self._prompt_api_key()
+  File "/Users/saahil/Desktop/Coding_Projects/DL/PoseYoga TL/venv/lib/python3.9/site-packages/wandb/sdk/wandb_login.py", line 249, in _prompt_api_key
+    key = apikey.prompt_api_key(
+  File "/Users/saahil/Desktop/Coding_Projects/DL/PoseYoga TL/venv/lib/python3.9/site-packages/wandb/sdk/lib/apikey.py", line 164, in prompt_api_key
+    key = input_callback(api_ask).strip()
+  File "/Users/saahil/Desktop/Coding_Projects/DL/PoseYoga TL/venv/lib/python3.9/site-packages/click/termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+  File "/Users/saahil/Desktop/Coding_Projects/DL/PoseYoga TL/venv/lib/python3.9/site-packages/click/termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+2024-06-29 22:39:54,847 INFO    MainThread:438 [wandb_init.py:_log_setup():520] Logging user logs to /Users/saahil/Desktop/Coding_Projects/DL/PoseYoga TL/wandb/run-20240629_223954-5710od40/logs/debug.log
+2024-06-29 22:39:54,847 INFO    MainThread:438 [wandb_init.py:_log_setup():521] Logging internal logs to /Users/saahil/Desktop/Coding_Projects/DL/PoseYoga TL/wandb/run-20240629_223954-5710od40/logs/debug-internal.log
+2024-06-29 22:39:54,847 INFO    MainThread:438 [wandb_init.py:init():560] calling init triggers
+2024-06-29 22:39:54,847 INFO    MainThread:438 [wandb_init.py:init():567] wandb.init called with sweep_config: {}
+config: {'epochs': 10, 'batch_size': 32, 'image_size': (256, 256), 'learning_rate': 0.001, 'optimizer': 'adam'}
+2024-06-29 22:39:54,847 INFO    MainThread:438 [wandb_init.py:init():585] re-initializing run, found existing run on stack: as9sv799
+2024-06-29 22:39:54,848 INFO    MainThread:438 [wandb_run.py:_finish():2109] finishing run saahilkatariads-MCKV Institute of Engineering/yoga_pose_classification/as9sv799
+2024-06-29 22:39:54,849 ERROR   MainThread:438 [jupyter.py:save_history():436] Run pip install nbformat to save notebook history
+2024-06-29 22:39:54,849 INFO    MainThread:438 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-06-29 22:39:54,849 INFO    MainThread:438 [wandb_init.py:_jupyter_teardown():448] cleaning up jupyter logic
+2024-06-29 22:39:54,849 INFO    MainThread:438 [wandb_run.py:_atexit_cleanup():2349] got exitcode: 0
+2024-06-29 22:39:54,849 INFO    MainThread:438 [wandb_run.py:_restore():2332] restore
+2024-06-29 22:39:54,849 INFO    MainThread:438 [wandb_run.py:_restore():2338] restore done

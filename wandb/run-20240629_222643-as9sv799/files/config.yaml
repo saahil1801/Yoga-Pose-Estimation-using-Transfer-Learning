@@ -1,0 +1,80 @@
+wandb_version: 1
+
+epochs:
+  desc: null
+  value: 10
+batch_size:
+  desc: null
+  value: 32
+image_size:
+  desc: null
+  value:
+  - 256
+  - 256
+_wandb:
+  desc: null
+  value:
+    python_version: 3.9.6
+    cli_version: 0.17.3
+    framework: keras
+    is_jupyter_run: true
+    is_kaggle_kernel: false
+    start_time: 1719680203
+    t:
+      1:
+      - 2
+      - 3
+      - 5
+      - 53
+      - 55
+      2:
+      - 2
+      - 3
+      - 5
+      - 53
+      - 55
+      3:
+      - 2
+      - 3
+      - 7
+      - 8
+      - 16
+      - 23
+      - 38
+      4: 3.9.6
+      5: 0.17.3
+      8:
+      - 1
+      - 4
+      - 5
+      10:
+      - 9
+      13: darwin-arm64
+    m:
+    - 1: epoch/epoch
+      6:
+      - 3
+    - 1: epoch/categorical_accuracy
+      5: 1
+      6:
+      - 1
+    - 1: epoch/loss
+      5: 1
+      6:
+      - 1
+    - 1: epoch/top_k_categorical_accuracy
+      5: 1
+      6:
+      - 1
+    - 1: epoch/val_categorical_accuracy
+      5: 1
+      6:
+      - 1
+    - 1: epoch/val_loss
+      5: 1
+      6:
+      - 1
+    - 1: epoch/val_top_k_categorical_accuracy
+      5: 1
+      6:
+      - 1
