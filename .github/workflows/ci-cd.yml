@@ -45,12 +45,12 @@ jobs:
       run: |
         python train.py
 
-    # Step 8: Upload the Best Model as an Artifact
-    - name: Upload Best Model
-      uses: actions/upload-artifact@v3  # Updated to v3
-      with:
-        name: best-model
-        path: models/best_overall_model.keras
+    # # Step 8: Upload the Best Model as an Artifact
+    # - name: Upload Best Model
+    #   uses: actions/upload-artifact@v3  # Updated to v3
+    #   with:
+    #     name: best-model
+    #     path: models/best_overall_model.weights.h5
 
     # Step 9: Upload Training Plots (Optional)
     - name: Upload Training Plots
