@@ -5,3 +5,4 @@ imutils
 scikit-learn
 mlflow
 pillow
+pytest
