@@ -27,7 +27,7 @@ if uploaded_file is not None:
         # Preprocess the image
         img_array = np.array(image)
         img_array = tf.image.resize(img_array, (256, 256))
-        img_array = np.expand_dims(img_array, axis=0) / 255.0
+        img_array = np.expand_dims(img_array, axis=0) 
 
         # Make predictions
         predictions = model.predict(img_array)
