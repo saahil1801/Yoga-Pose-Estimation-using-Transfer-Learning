@@ -12,18 +12,19 @@ def config():
     return Config()
 
 
-def test_model_accuracy():
+def test_model_accuracy(config):
     # Load the best model and validate its performance
-    paths = config.get_paths()
-    dataset_params = config.get_dataset_params()
     
-    model = tf.keras.models.load_model("models/best_model_VGG16.keras")
+    dataset_params = config.get_dataset_params()
+    paths = config.get_paths()
+    
+   
 
     base_model = tf.keras.applications.VGG16(weights=None, include_top=False, input_shape=(256, 256, 3))
     model = create_model(base_model, num_classes=len(dataset_params['class_names']))
 
     # Load the checkpoint weights
-    model.load_weights("models/checkpoint_model.h5")
+    model.load_weights("models/best_model_VGG16.keras")
 
 
     # Simulate or use actual validation data
