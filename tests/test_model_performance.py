@@ -1,33 +1,33 @@
 import tensorflow as tf
 import sys
 import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)))
-from model_utils import create_model
-from config import Config
 import pytest
+
 # Add the project root directory to the system path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)))
+from config import Config
 
 @pytest.fixture
 def config():
     return Config()
 
-
 def test_model_accuracy(config):
-    # Load the best model and validate its performance
+    # Path to the saved best model
+    model_path = "models/best_overall_model.keras"
     
-    dataset_params = config.get_dataset_params()
-    paths = config.get_paths()
+    # Check if the model file exists
+    if not os.path.exists(model_path):
+        pytest.fail(f"Model file not found: {model_path}")
     
-    base_model = tf.keras.applications.VGG16(weights='imagenet', include_top=False, input_shape=(256, 256, 3))
-    model = create_model(base_model, num_classes=len(dataset_params['class_names']))
-
-    # Load the checkpoint weights
-    model.load_weights("models/best_model_VGG16.keras")
-
-
-    # Simulate or use actual validation data
+    # Load the entire model
+    try:
+        model = tf.keras.models.load_model(model_path)
+    except Exception as e:
+        pytest.fail(f"Failed to load model: {e}")
+    
+    # Load validation dataset
     val_dataset = tf.keras.utils.image_dataset_from_directory(
-        'data/val',
+        'data/val',  # Use config to get the validation directory
         labels='inferred',
         label_mode='categorical',
         batch_size=32,
@@ -35,7 +35,11 @@ def test_model_accuracy(config):
         shuffle=False
     )
 
-    loss, acc, top_k_acc = model.evaluate(val_dataset)
+    # Evaluate the model
+    try:
+        loss, acc, top_k_acc = model.evaluate(val_dataset)
+    except Exception as e:
+        pytest.fail(f"Model evaluation failed: {e}")
 
     # Check if the accuracy meets the minimum acceptance criteria
-    assert acc >= 0.85  # e.g., the model should achieve >= 85% accuracy
+    assert acc >= 0.85, f"Model accuracy {acc} is below the required threshold of 80%."
