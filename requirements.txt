@@ -1,0 +1,8 @@
+tensorflow
+keras
+matplotlib
+imutils
+scikit-learn
+mlflow
+pillow
+os
