@@ -122,7 +122,7 @@ def main():
     if best_model_name:
         print(f"[INFO] Best model is {best_model_name} with validation loss: {best_val_loss}")
         final_best_model_path = "models/best_overall_model.keras"
-        shutil.copy(best_model_weights_path, final_best_model_path)
+        model.save(final_best_model_path)
         mlflow.log_artifact(final_best_model_path)
         print(f"[INFO] Best model saved as: {final_best_model_path}")
 
