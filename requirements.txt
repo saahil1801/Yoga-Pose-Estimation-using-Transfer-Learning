@@ -5,4 +5,3 @@ imutils
 scikit-learn
 mlflow
 pillow
-os
