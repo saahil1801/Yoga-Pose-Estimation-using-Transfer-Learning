@@ -1,6 +1,5 @@
 venv/
 mlruns/
 *.dylib
-*.keras
 wandb/
 test.ipynb
