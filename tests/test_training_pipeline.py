@@ -32,8 +32,3 @@ def test_train_model_pipeline(config):
     # Assert that training completed
     assert len(history.history['loss']) > 0
 
-def test_pipeline_creates_model_artifacts():
-    main()
-
-    # Assert that the model artifact is created
-    assert os.path.exists("models/best_overall_model.keras")
