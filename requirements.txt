@@ -6,3 +6,4 @@ scikit-learn
 mlflow
 pillow
 pytest
+cv2
