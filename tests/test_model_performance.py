@@ -18,9 +18,7 @@ def test_model_accuracy(config):
     dataset_params = config.get_dataset_params()
     paths = config.get_paths()
     
-   
-
-    base_model = tf.keras.applications.VGG16(weights=None, include_top=False, input_shape=(256, 256, 3))
+    base_model = tf.keras.applications.VGG16(weights='imagenet', include_top=False, input_shape=(256, 256, 3))
     model = create_model(base_model, num_classes=len(dataset_params['class_names']))
 
     # Load the checkpoint weights
